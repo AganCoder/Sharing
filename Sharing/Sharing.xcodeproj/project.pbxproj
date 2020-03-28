@@ -12,7 +12,58 @@
 		8F5FD590242F5D59005AA160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5FD58E242F5D59005AA160 /* Main.storyboard */; };
 		8F5FD592242F5D5B005AA160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5FD591242F5D5B005AA160 /* Assets.xcassets */; };
 		8F5FD595242F5D5B005AA160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5FD593242F5D5B005AA160 /* LaunchScreen.storyboard */; };
+		8F5FD645242F6A74005AA160 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5FD644242F6A74005AA160 /* ReplayKit.framework */; };
+		8F5FD647242F6A74005AA160 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5FD646242F6A74005AA160 /* UIKit.framework */; };
+		8F5FD64A242F6A74005AA160 /* BroadcastSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FD649242F6A74005AA160 /* BroadcastSetupViewController.swift */; };
+		8F5FD64E242F6A74005AA160 /* Recording.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F5FD642242F6A74005AA160 /* Recording.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F5FD658242F6A8E005AA160 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5FD644242F6A74005AA160 /* ReplayKit.framework */; };
+		8F5FD65B242F6A8E005AA160 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FD65A242F6A8E005AA160 /* SampleHandler.swift */; };
+		8F5FD662242F6A8E005AA160 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5FD644242F6A74005AA160 /* ReplayKit.framework */; };
+		8F5FD663242F6A8E005AA160 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5FD646242F6A74005AA160 /* UIKit.framework */; };
+		8F5FD666242F6A8E005AA160 /* BroadcastSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FD665242F6A8E005AA160 /* BroadcastSetupViewController.swift */; };
+		8F5FD66A242F6A8E005AA160 /* UploadSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F5FD661242F6A8E005AA160 /* UploadSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F5FD66D242F6A8E005AA160 /* Upload.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F5FD657242F6A8E005AA160 /* Upload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F5FD64C242F6A74005AA160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5FD57D242F5D59005AA160 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5FD641242F6A74005AA160;
+			remoteInfo = Recording;
+		};
+		8F5FD668242F6A8E005AA160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5FD57D242F5D59005AA160 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5FD660242F6A8E005AA160;
+			remoteInfo = UploadSetupUI;
+		};
+		8F5FD66B242F6A8E005AA160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5FD57D242F5D59005AA160 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5FD656242F6A8E005AA160;
+			remoteInfo = Upload;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F5FD64F242F6A74005AA160 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F5FD64E242F6A74005AA160 /* Recording.appex in Embed App Extensions */,
+				8F5FD66A242F6A8E005AA160 /* UploadSetupUI.appex in Embed App Extensions */,
+				8F5FD66D242F6A8E005AA160 /* Upload.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F5FD585242F5D59005AA160 /* Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +73,17 @@
 		8F5FD591242F5D5B005AA160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F5FD594242F5D5B005AA160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F5FD596242F5D5B005AA160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5FD642242F6A74005AA160 /* Recording.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Recording.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5FD644242F6A74005AA160 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		8F5FD646242F6A74005AA160 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F5FD649242F6A74005AA160 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
+		8F5FD64B242F6A74005AA160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5FD657242F6A8E005AA160 /* Upload.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Upload.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5FD65A242F6A8E005AA160 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		8F5FD65C242F6A8E005AA160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5FD661242F6A8E005AA160 /* UploadSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UploadSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5FD665242F6A8E005AA160 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
+		8F5FD667242F6A8E005AA160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +94,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F5FD63F242F6A74005AA160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD645242F6A74005AA160 /* ReplayKit.framework in Frameworks */,
+				8F5FD647242F6A74005AA160 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD654242F6A8E005AA160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD658242F6A8E005AA160 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD65E242F6A8E005AA160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD662242F6A8E005AA160 /* ReplayKit.framework in Frameworks */,
+				8F5FD663242F6A8E005AA160 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				8F5FD587242F5D59005AA160 /* Sharing */,
+				8F5FD648242F6A74005AA160 /* Recording */,
+				8F5FD659242F6A8E005AA160 /* Upload */,
+				8F5FD664242F6A8E005AA160 /* UploadSetupUI */,
+				8F5FD643242F6A74005AA160 /* Frameworks */,
 				8F5FD586242F5D59005AA160 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				8F5FD585242F5D59005AA160 /* Sharing.app */,
+				8F5FD642242F6A74005AA160 /* Recording.appex */,
+				8F5FD657242F6A8E005AA160 /* Upload.appex */,
+				8F5FD661242F6A8E005AA160 /* UploadSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +159,42 @@
 			path = Sharing;
 			sourceTree = "<group>";
 		};
+		8F5FD643242F6A74005AA160 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FD644242F6A74005AA160 /* ReplayKit.framework */,
+				8F5FD646242F6A74005AA160 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F5FD648242F6A74005AA160 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FD649242F6A74005AA160 /* BroadcastSetupViewController.swift */,
+				8F5FD64B242F6A74005AA160 /* Info.plist */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		8F5FD659242F6A8E005AA160 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FD65A242F6A8E005AA160 /* SampleHandler.swift */,
+				8F5FD65C242F6A8E005AA160 /* Info.plist */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		8F5FD664242F6A8E005AA160 /* UploadSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FD665242F6A8E005AA160 /* BroadcastSetupViewController.swift */,
+				8F5FD667242F6A8E005AA160 /* Info.plist */,
+			);
+			path = UploadSetupUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +205,70 @@
 				8F5FD581242F5D59005AA160 /* Sources */,
 				8F5FD582242F5D59005AA160 /* Frameworks */,
 				8F5FD583242F5D59005AA160 /* Resources */,
+				8F5FD64F242F6A74005AA160 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F5FD64D242F6A74005AA160 /* PBXTargetDependency */,
+				8F5FD669242F6A8E005AA160 /* PBXTargetDependency */,
+				8F5FD66C242F6A8E005AA160 /* PBXTargetDependency */,
 			);
 			name = Sharing;
 			productName = Sharing;
 			productReference = 8F5FD585242F5D59005AA160 /* Sharing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8F5FD641242F6A74005AA160 /* Recording */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5FD652242F6A74005AA160 /* Build configuration list for PBXNativeTarget "Recording" */;
+			buildPhases = (
+				8F5FD63E242F6A74005AA160 /* Sources */,
+				8F5FD63F242F6A74005AA160 /* Frameworks */,
+				8F5FD640242F6A74005AA160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recording;
+			productName = Recording;
+			productReference = 8F5FD642242F6A74005AA160 /* Recording.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8F5FD656242F6A8E005AA160 /* Upload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5FD671242F6A8E005AA160 /* Build configuration list for PBXNativeTarget "Upload" */;
+			buildPhases = (
+				8F5FD653242F6A8E005AA160 /* Sources */,
+				8F5FD654242F6A8E005AA160 /* Frameworks */,
+				8F5FD655242F6A8E005AA160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Upload;
+			productName = Upload;
+			productReference = 8F5FD657242F6A8E005AA160 /* Upload.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8F5FD660242F6A8E005AA160 /* UploadSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5FD66E242F6A8E005AA160 /* Build configuration list for PBXNativeTarget "UploadSetupUI" */;
+			buildPhases = (
+				8F5FD65D242F6A8E005AA160 /* Sources */,
+				8F5FD65E242F6A8E005AA160 /* Frameworks */,
+				8F5FD65F242F6A8E005AA160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UploadSetupUI;
+			productName = UploadSetupUI;
+			productReference = 8F5FD661242F6A8E005AA160 /* UploadSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +281,15 @@
 				ORGANIZATIONNAME = "Noah Gao";
 				TargetAttributes = {
 					8F5FD584242F5D59005AA160 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8F5FD641242F6A74005AA160 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8F5FD656242F6A8E005AA160 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8F5FD660242F6A8E005AA160 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -113,6 +308,9 @@
 			projectRoot = "";
 			targets = (
 				8F5FD584242F5D59005AA160 /* Sharing */,
+				8F5FD641242F6A74005AA160 /* Recording */,
+				8F5FD656242F6A8E005AA160 /* Upload */,
+				8F5FD660242F6A8E005AA160 /* UploadSetupUI */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +326,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F5FD640242F6A74005AA160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD655242F6A8E005AA160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD65F242F6A8E005AA160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +359,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F5FD63E242F6A74005AA160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD64A242F6A74005AA160 /* BroadcastSetupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD653242F6A8E005AA160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD65B242F6A8E005AA160 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5FD65D242F6A8E005AA160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FD666242F6A8E005AA160 /* BroadcastSetupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F5FD64D242F6A74005AA160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5FD641242F6A74005AA160 /* Recording */;
+			targetProxy = 8F5FD64C242F6A74005AA160 /* PBXContainerItemProxy */;
+		};
+		8F5FD669242F6A8E005AA160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5FD660242F6A8E005AA160 /* UploadSetupUI */;
+			targetProxy = 8F5FD668242F6A8E005AA160 /* PBXContainerItemProxy */;
+		};
+		8F5FD66C242F6A8E005AA160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5FD656242F6A8E005AA160 /* Upload */;
+			targetProxy = 8F5FD66B242F6A8E005AA160 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F5FD58E242F5D59005AA160 /* Main.storyboard */ = {
@@ -279,9 +540,10 @@
 		8F5FD59A242F5D5B005AA160 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85V32XYZPL;
+				DEVELOPMENT_TEAM = 28S852KBS5;
 				INFOPLIST_FILE = Sharing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +559,10 @@
 		8F5FD59B242F5D5B005AA160 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85V32XYZPL;
+				DEVELOPMENT_TEAM = 28S852KBS5;
 				INFOPLIST_FILE = Sharing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +570,126 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F5FD650242F6A74005AA160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = Recording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.Recording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F5FD651242F6A74005AA160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = Recording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.Recording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F5FD66F242F6A8E005AA160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = UploadSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.UploadSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F5FD670242F6A8E005AA160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = UploadSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.UploadSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F5FD672242F6A8E005AA160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = Upload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.Upload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F5FD673242F6A8E005AA160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28S852KBS5;
+				INFOPLIST_FILE = Upload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Gao.Sharing.Upload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +712,33 @@
 			buildConfigurations = (
 				8F5FD59A242F5D5B005AA160 /* Debug */,
 				8F5FD59B242F5D5B005AA160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5FD652242F6A74005AA160 /* Build configuration list for PBXNativeTarget "Recording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5FD650242F6A74005AA160 /* Debug */,
+				8F5FD651242F6A74005AA160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5FD66E242F6A8E005AA160 /* Build configuration list for PBXNativeTarget "UploadSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5FD66F242F6A8E005AA160 /* Debug */,
+				8F5FD670242F6A8E005AA160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5FD671242F6A8E005AA160 /* Build configuration list for PBXNativeTarget "Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5FD672242F6A8E005AA160 /* Debug */,
+				8F5FD673242F6A8E005AA160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
