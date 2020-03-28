@@ -11,6 +11,8 @@ import ReplayKit
 
 class ViewController: UIViewController {
 
+    var boradcastAVC: RPBroadcastActivityViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,28 +22,49 @@ class ViewController: UIViewController {
 
     @IBAction func startRecord(_ sender: UIButton) {
         
-        let screenRecorder = RPScreenRecorder.shared()
-        screenRecorder.isMicrophoneEnabled = true
-        screenRecorder.startRecording { (error) in
-            debugPrint(error)
-        }
+        debugPrint(#function)
         
-    }
-    
-    @IBAction func endRecord(_ sender: UIButton) {
-        
-    
-        RPScreenRecorder.shared().stopRecording {[weak self] (controller, error) in
-            guard let controller = controller, error == nil else {
+        RPBroadcastActivityViewController.load { [weak self] (broadcastActivityViewController, error) in
+            guard let controller = broadcastActivityViewController else {
                 return
             }
             
-            self?.present(controller, animated: true, completion: {
-        
-            })
+            controller.delegate = self
+            
+            
+//            self?.boradcastAVC = controller
+//            self?.boradcastAVC?.delegate = self
+            
+            self?.present(controller, animated: true, completion: nil)
+            
         }
+
+    }
+    
+    @IBAction func endRecord(_ sender: UIButton) {
         
     }
     
 }
 
+extension ViewController: RPBroadcastActivityViewControllerDelegate {
+    
+    func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
+        
+        // 回调到才此处，上面有两个ViewConttroller
+        // RPBroadcastActivityViewController
+        // RPBroadcastActivityHostViewController
+        DispatchQueue.main.sync {
+            debugPrint(broadcastActivityViewController)
+    
+//            broadcastActivityViewController.dismiss(animated: true, completion: nil)            
+            self.boradcastAVC = broadcastActivityViewController
+        }
+        
+        broadcastController?.startBroadcast(handler: { (error) in
+            debugPrint(error)
+        })
+    }
+    
+
+}

@@ -27,4 +27,33 @@ class BroadcastSetupViewController: UIViewController {
         // Tell ReplayKit that the extension was cancelled by the user
         self.extensionContext?.cancelRequest(withError: error)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        let btn = UIButton(type: .close)
+        btn.addTarget(self, action: #selector(closeButtonDidTapped(sender:)), for: .touchUpInside)
+        view.addSubview(btn)
+        
+        btn.center = view.center
+        
+        view.backgroundColor = .green
+        
+        userDidFinishSetup()
+        
+    }
+    
+    @objc func closeButtonDidTapped(sender: UIButton) {
+        userDidFinishSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        userDidFinishSetup()
+        
+        debugPrint(#function)
+    }
 }
+
