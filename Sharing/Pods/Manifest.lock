@@ -1,0 +1,22 @@
+PODS:
+  - BlueSocket (1.0.52)
+  - EFQRCode (5.1.6):
+    - EFQRCode/Core (= 5.1.6)
+  - EFQRCode/Core (5.1.6)
+
+DEPENDENCIES:
+  - BlueSocket
+  - EFQRCode
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BlueSocket
+    - EFQRCode
+
+SPEC CHECKSUMS:
+  BlueSocket: 1acd943acb07b55905291d608649fcfbf8cbd57d
+  EFQRCode: a7ea2e517912f5bf6ba258b631327a83cd8084a5
+
+PODFILE CHECKSUM: faa83d7238c84fb5a110f402a99fe78cd843a8be
+
+COCOAPODS: 1.9.1
