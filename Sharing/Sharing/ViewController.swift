@@ -22,33 +22,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func startRecord(_ sender: UIButton) {
-        let names: [String] = ["Alice", "Bob", "Jessy"]
-        
-        for name in names {
-            if let data = name.data(using: .utf8) {
-                try! socket.write(from: data, to: Socket.createAddress(for: "192.168.0.101", on: 9999)!)
+            
+        RPBroadcastActivityViewController.load(withPreferredExtension: "io.github.rsenjoyer.Gao.Sharing.UploadSetupUI") { [weak self] (broadcastActivityViewController, error) in
+            guard let controller = broadcastActivityViewController else {
+                return
             }
-
-            var d = Data()
-            try? socket.readDatagram(into: &d)                                                
-            print(String(data: d, encoding: .utf8))
+            controller.delegate = self
+            self?.present(controller, animated: true, completion: nil)
         }
-        
-    
-//        RPBroadcastActivityViewController.load(withPreferredExtension: "io.github.rsenjoyer.Gao.Sharing.UploadSetupUI") { [weak self] (broadcastActivityViewController, error) in
-//            guard let controller = broadcastActivityViewController else {
-//                return
-//            }
-//
-//            controller.delegate = self
-//
-//
-////            self?.boradcastAVC = controller
-////            self?.boradcastAVC?.delegate = self
-//
-//            self?.present(controller, animated: true, completion: nil)
-//
-//        }
 
     }
     
@@ -61,20 +42,13 @@ class ViewController: UIViewController {
 extension ViewController: RPBroadcastActivityViewControllerDelegate {
     
     func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
-        
-        // 回调到才此处，上面有两个ViewConttroller
-        // RPBroadcastActivityViewController
-        // RPBroadcastActivityHostViewController
-//        DispatchQueue.main.sync {
-//            debugPrint(broadcastActivityViewController)
-//
-//            broadcastActivityViewController.dismiss(animated: true, completion: nil)
-//            self.boradcastAVC = broadcastActivityViewController
-//        }
-//
-//        broadcastController?.startBroadcast(handler: { (error) in
-//            debugPrint(error)
-//        })
+        DispatchQueue.main.sync {
+            broadcastActivityViewController.dismiss(animated: true, completion: nil)
+        }
+
+        broadcastController?.startBroadcast(handler: { (error) in
+            
+        })
     }
     
 

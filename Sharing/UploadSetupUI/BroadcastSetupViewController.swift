@@ -39,9 +39,7 @@ class BroadcastSetupViewController: UIViewController {
         btn.center = view.center
         
         view.backgroundColor = .green
-        
-        userDidFinishSetup()
-        
+                
     }
     
     @objc func closeButtonDidTapped(sender: UIButton) {

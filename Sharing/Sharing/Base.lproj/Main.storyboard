@@ -32,8 +32,20 @@
                                     <action selector="endRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNU-Zr-ORV"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUU-ut-3Uf" customClass="RPSystemBroadcastPickerView">
+                                <rect key="frame" x="20" y="96" width="44" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ENb-Aa-4ww"/>
+                                    <constraint firstAttribute="width" constant="44" id="UJJ-Nt-HR2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DUU-ut-3Uf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Yu8-gk-vJi"/>
+                            <constraint firstItem="DUU-ut-3Uf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="heH-55-Ifm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="c1T-Gc-slk">

@@ -7,9 +7,12 @@
 //
 
 import ReplayKit
+import Socket
 
 class SampleHandler: RPBroadcastSampleHandler {
 
+    var socket = try! Socket.create(family: .inet, type: .datagram, proto: .udp)
+    
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
         debugPrint(#function)
         // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional. 
@@ -34,7 +37,12 @@ class SampleHandler: RPBroadcastSampleHandler {
         debugPrint(#function)
         switch sampleBufferType {
         case RPSampleBufferType.video:
-            // Handle video sample buffer
+            let names: [String] = ["Alice", "Bob", "Jessy"]
+            for name in names {
+                if let data = name.data(using: .utf8) {
+                    try! socket.write(from: data, to: Socket.createAddress(for: "10.100.94.27", on: 9999)!)
+                }
+            }
             break
         case RPSampleBufferType.audioApp:
             // Handle audio sample buffer for app audio

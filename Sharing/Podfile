@@ -25,7 +25,7 @@ end
 target 'Upload' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'BlueSocket'
   # Pods for Upload
 
 end
