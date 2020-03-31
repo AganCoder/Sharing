@@ -13,6 +13,8 @@ class SampleHandler: RPBroadcastSampleHandler {
 
     var socket = try! Socket.create(family: .inet, type: .datagram, proto: .udp)
     
+    
+    
     override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
         debugPrint(#function)
         // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional. 
@@ -34,15 +36,24 @@ class SampleHandler: RPBroadcastSampleHandler {
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
-        debugPrint(#function)
         switch sampleBufferType {
         case RPSampleBufferType.video:
-            let names: [String] = ["Alice", "Bob", "Jessy"]
-            for name in names {
-                if let data = name.data(using: .utf8) {
-                    try! socket.write(from: data, to: Socket.createAddress(for: "10.100.94.27", on: 9999)!)
+            
+            if let cvImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
+                let ciimage = CIImage(cvImageBuffer: cvImageBuffer)
+                let context = CIContext()
+                
+                guard let cgImage = context.createCGImage(ciimage, from: ciimage.extent) else {
+                    return
                 }
+                
+                let uiImage = UIImage(cgImage: cgImage)
+            
+                                
+            } else {
+                debugPrint("转换错误")
             }
+                
             break
         case RPSampleBufferType.audioApp:
             // Handle audio sample buffer for app audio
